@@ -3,6 +3,9 @@
 
 *.sublime-workspace
 
-*/__pycache__/
+*__pycache__/
 *.pyc
 *.egg-info/
+
+*results*
+tmp/

@@ -2,7 +2,7 @@ import random
 from collections import deque
 
 import numpy as np
-from gym.spaces import Discrete, Box
+from gym.spaces import Discrete
 import torch
 from torch import nn
 from torch import optim
@@ -10,7 +10,7 @@ import torch.nn.functional as F
 
 from coop_marl.utils import Arrdict, Dotdict, arrdict, ortho_layer_init, dict_to_tensor,\
                             chop_into_episodes, get_logger
-from coop_marl.agents import Agent, PGAgent
+from coop_marl.agents import Agent
 from coop_marl.models.modules import FCLayers, HyperNet
 
 logger = get_logger()
