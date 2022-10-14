@@ -1,0 +1,43 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/default.yaml
+
+render: True
+render_mode: 'rgb_array'
+num_cpus: 1
+use_gpu: False
+debug: False
+
+algo_name: trajedi
+trainer: trajedi
+runner: EpisodesRunner
+agent_name: MAPPOTrajeDiAgent
+
+use_br: False
+n_iter: 500
+pop_size: 2
+diverse_coef: 1.0
+kernel_gamma: 0.0
+flatten_traj: True
+
+eval_interval: 50
+n_sp_episodes: 50
+n_xp_episodes: 50
+n_eval_ep: 10
+
+z_dim: 4
+z_discrete: True
+gamma: 0.99
+lr: 0.0001
+vf_coef: 0.5
+ent_coef: 0.03
+epochs: 5
+num_mb: 3
+gae_lambda: 0.95
+clip_param: 0.3
+vf_clip_param: 10.0
+
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]

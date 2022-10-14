@@ -1,0 +1,23 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+
+def_config: !include config/algs/incompat/default.yaml
+
+runner: StepsRunner
+trainer: incompat
+n_iter: 2000
+n_sp_ts: 10000
+n_xp_ts: 10000
+eval_interval: 500
+ent_coef: 0.03
+pop_size: 4
+z_dim: 8
+xp_coef: 0.2
+
+epochs: 15
+num_mb: 5
+lr: 0.0005
+discrim_coef: 0.1

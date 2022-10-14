@@ -1,0 +1,15 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+
+def_config: !include config/algs/sp_mi/default.yaml
+
+n_iter: 300
+eval_interval: 200
+z_dim: 4
+discrim_coef: 5.0
+epcohs: 10
+num_mb: 2
+lr: 0.0003

@@ -1,0 +1,17 @@
+mlagents_envs==0.27.0
+PettingZoo==1.9.0
+pygame==2.0.1
+pymunk==6.0.0
+ray==1.9.0
+pygifsicle==1.0.5
+pyyaml-include==1.2.post2
+pyglet==1.5.15
+opencv-python==3.4.14.53
+gym==0.18.3
+tensorboard==2.8.0
+xvfbwrapper==0.2.9
+jupyterlab
+wandb
+matplotlib
+plotly
+tqdm

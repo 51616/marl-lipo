@@ -1,0 +1,51 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/default.yaml
+
+trainer: incompat
+runner: EpisodesRunner
+algo_name: sp_mi # used for creating a save directory
+render: True
+render_mode: 'rgb_array'
+eval_interval: 50
+n_eval_ep: 10
+num_cpus: 1
+use_gpu: False
+debug: False
+agent_name: IncompatMAPPOZ
+flatten_traj: False
+vary_z_eval: True
+eval_all_pairs: False
+num_xp_pair_sample: 0
+
+parent_only: False
+n_iter: 400
+eval_interval: 50
+n_sp_episodes: 50
+n_xp_episodes: 50
+n_eval_ep: 10
+z_dim: 4
+z_discrete: True
+pop_size: 1
+flatten_traj: False
+pg_xp_max_only: True
+value_xp_max_only: False
+anneal_xp: False
+
+lr: 0.0001
+use_hypernet: False
+# hyper_l2_reg_coef: 0.0001
+xp_coef: 0.0
+discrim_coef: 0.1
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.03
+clip_param: 0.3
+vf_clip_param: 10
+vf_coef: 0.5
+num_mb: 5
+epochs: 3
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]

@@ -1,0 +1,22 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/trajedi/default.yaml
+
+render: False
+get_act_dist: True
+n_iter: 300
+eval_interval: 300
+n_sp_episodes: 100
+n_xp_episodes: 100
+pop_size: 32
+z_dim: 8
+ent_coef: 0.0
+discrim_coef: 0.0
+diverse_coef: 10.0
+kernel_gamma: 0.0
+lr: 0.0003
+num_mb: 2
+epochs: 10

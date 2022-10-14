@@ -1,0 +1,40 @@
+def_config: !include config/algs/default.yaml
+
+algo_name: maven
+trainer: simple
+agent_name: QMIXAgent
+runner: EpisodesRunner
+flatten_traj: False
+vary_z_eval: True
+n_iter: 500
+n_sp_episodes: 10
+n_eval_ep: 10 # for each z value
+eval_interval: 50
+hidden_dim: 64
+mixing_embed_dim: 32
+hypernet_embed: 128
+buffer_size: 1000
+batch_size: 128
+
+maven: True
+discrim_coef: 0.1
+z_dim: 4
+z_discrete: True
+discrim_hidden_dim: 64
+z_policy: False
+
+lr: 0.001 
+gamma: 0.99
+start_e: 1
+end_e: 0.05
+explore_decay_ts: 100000 
+target_update_freq: 25
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]
+
+# for incompat trainer
+pop_size: 1
+num_xp_pair_sample: 0
+use_bandit: False
+pg_xp_max_only: False
+value_xp_max_only: False
+eval_all_pairs: False

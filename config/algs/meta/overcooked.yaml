@@ -1,0 +1,33 @@
+
+def_config: !include config/algs/meta/default.yaml
+
+runner: StepsRunner
+n_iter: 500
+n_ts: 320000
+eval_interval: 100
+n_eval_ep: 2
+render: False
+training_device: 'cuda'
+
+n_workers: 16 # 8
+critic_use_local_obs: True
+anneal_lr: True
+num_anneal_iter: 500
+min_anneal_lr: 0.0003
+lr: 0.0005
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.03
+clip_param: 0.3
+vf_clip_param: 10
+vf_coef: 1.0
+max_len: 50
+num_seq_mb: 1600 # num_seq_mb * max_len timesteps per minibatch -> n_ts/(max_len*num_seq_mb) minibatches
+num_mb: 0
+mb_size: 0
+epochs: 15
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]
+z_dim: 8
+
+partner_dir: []
+partner_iterations: null

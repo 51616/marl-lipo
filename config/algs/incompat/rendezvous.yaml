@@ -1,0 +1,19 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+
+def_config: !include config/algs/incompat/default.yaml
+
+trainer: incompat
+n_iter: 300
+eval_interval: 300
+pop_size: 8
+z_dim: 4
+xp_coef: 1.0
+
+epcohs: 10
+num_mb: 2
+lr: 0.0003
+discrim_coef: 0.5

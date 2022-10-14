@@ -1,0 +1,14 @@
+def_config: !include config/algs/maven/default.yaml
+
+render: False
+get_q_values: True
+lr: 0.0003
+z_dim: 32
+n_iter: 300
+n_sp_episodes: 100
+eval_interval: 500
+buffer_size: 10000
+discrim_coef: 10
+start_e: 1
+end_e: 0.05
+explore_decay_ts: 20000

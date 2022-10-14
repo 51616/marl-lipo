@@ -1,0 +1,67 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/default.yaml
+
+render: True
+render_mode: 'rgb_array'
+num_cpus: 1
+use_gpu: False
+debug: False
+
+algo_name: multi_sp
+trainer: incompat
+runner: EpisodesRunner
+agent_name: IncompatMAPPOZ
+
+use_gpu: False
+debug: False
+flatten_traj: False
+parent_only: False
+eval_all_pairs: False
+z_dim: 4
+z_discrete: True
+pop_size: 1
+
+pg_xp_max_only: True
+value_xp_max_only: False
+shared_z: False
+use_bandit: False
+anneal_xp: False
+
+discrim_coef: 0.0
+xp_coef: 0.0
+use_hypernet: False
+num_xp_pair_sample: 0
+
+# these two reduce the trajedi trainer to just be a multi-run trainer
+use_br: False
+diverse_coef: 0.0
+
+n_iter: 100
+pop_size: 2
+kernel_gamma: 0.0
+flatten_traj: True
+
+eval_interval: 50
+n_sp_episodes: 50
+n_xp_episodes: 50
+n_sp_ts: 5000
+n_xp_ts: 5000
+n_eval_ep: 10
+hidden_size: 64
+num_xp_pair_sample: 0
+
+gamma: 0.99
+lr: 0.0001
+vf_coef: 0.5
+ent_coef: 0.03
+epochs: 5
+num_mb: 3
+mb_size: 0
+gae_lambda: 0.95
+clip_param: 0.3
+vf_clip_param: 10.0
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]

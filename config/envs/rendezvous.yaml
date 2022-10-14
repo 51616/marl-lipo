@@ -1,0 +1,9 @@
+# Format goes like this
+# trainer_name:
+#   k: v
+
+name: rendezvous
+horizon: 50
+n_landmarks: 4
+partner_obs: True
+mode: easy

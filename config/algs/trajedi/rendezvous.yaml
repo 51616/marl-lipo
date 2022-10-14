@@ -1,0 +1,15 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/trajedi/default.yaml
+
+n_iter: 300
+eval_interval: 200
+pop_size: 4
+diverse_coef: 10.0
+kernel_gamma: 0.0
+lr: 0.0003
+num_mb: 2
+epochs: 10

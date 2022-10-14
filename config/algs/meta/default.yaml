@@ -1,0 +1,48 @@
+# Format goes like this
+# def_config:
+#   k: v
+# config:
+#   k: v
+def_config: !include config/algs/default.yaml
+
+algo_name: meta_rl # used for creating a save directory
+trainer: meta
+runner: EpisodesRunner
+agent_name: MAPPORL2Agent 
+render: True
+render_mode: 'rgb_array'
+eval_interval: 50
+n_eval_ep: 10
+num_cpus: 1
+use_gpu: False
+debug: False
+
+n_workers: 4
+n_iter: 400
+eval_interval: 50
+n_episodes: 50
+n_ts: 5000
+n_eval_ep: 10
+z_dim: 4
+z_discrete: True
+flatten_traj: True
+critic_use_local_obs: False
+
+hidden_size: 256
+lr: 0.001
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.01
+clip_param: 0.3
+vf_clip_param: 10
+vf_coef: 1.0 
+max_len: 50
+num_seq_mb: 100 # 100*50 timesteps per minibatch
+num_mb: 0
+mb_size: 0
+epochs: 10
+env_wrappers: [ZWrapper, AgentIDWrapper, StateWrapper]
+shared_z: False
+
+partner_dir: []
+partner_iterations: []

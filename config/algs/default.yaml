@@ -1,0 +1,40 @@
+# Format goes like this
+# trainer_name:
+#   k: v
+trainer: simple
+runner: EpisodesRunner
+render: True
+render_only_sp: False
+render_mode: 'rgb_array'
+vary_z_eval: False
+n_workers: 16
+flatten_traj: True
+num_cpus: 1
+use_gpu: False
+debug: False
+device: 'cpu'
+n_grad_cum: 0
+training_device: 'cpu'
+save_folder: 'results'
+checkpoint: Null
+run_name: ''
+save_interval: 0
+
+anneal_lr: False
+l2_reg_coef: 0.0
+min_action: -1
+max_action: 1
+norm_obs: True
+norm_ret: True
+norm_state: True
+anneal_lr: False
+use_value_norm: False
+pol_init_var: 1.0
+hidden_size: 64
+num_hidden: 2
+clip_v_loss: True
+save_dir: Null
+shared_z: True
+
+use_bandit: False
+uniform_selector_keep_last: False
