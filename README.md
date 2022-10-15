@@ -26,3 +26,15 @@ Installing dependencies.
 ```
 ./install.sh
 ```
+
+### Training
+
+Examples of training command are in `scripts/`. The commands are based on the best searched hyperparameters of the corresponding algorithm and environment. If you want to run the scripts, make sure that you are currently at the root of the project.
+
+For generalist agents, you can use the following commands:
+```
+xvfb-run -a python main.py --config_file config/algs/meta/overcooked.yaml \
+--env_config_file config/envs/overcooked.yaml --config {"partner_dir": ["..."], "render": 0}
+```
+where `partner_dir` is the path to the training partners e.g., `training_partners_8/overcooked_full_divider_salad_4/trajedi/20220919-233301`.
+Generalist agents can only be trained after you obtained the training partners.
