@@ -1,4 +1,6 @@
-# Coop MARL
+# Generating Diverse Cooperative Agents by Learning Incompatible Policies
+
+[Paper](https://openreview.net/forum?id=UkU05GOH7_6) | [Project page](https://sites.google.com/view/iclr-lipo-2023)
 
 ### Installation
 
