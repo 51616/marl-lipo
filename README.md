@@ -40,3 +40,14 @@ xvfb-run -a python main.py --config_file config/algs/meta/overcooked.yaml \
 ```
 where `partner_dir` is the path to the training partners e.g., `training_partners_8/overcooked_full_divider_salad_4/trajedi/20220919-233301`.
 Generalist agents can only be trained after you obtained the training partners.
+
+### BibTeX
+```
+@inproceedings{charakorn2023generating,
+title={Generating Diverse Cooperative Agents by Learning Incompatible Policies},
+author={Rujikorn Charakorn and Poramate Manoonpong and Nat Dilokthanakul},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=UkU05GOH7_6}
+}
+```
